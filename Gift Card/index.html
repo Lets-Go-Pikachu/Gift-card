@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>শুভ শারদীয়া তিথি | Happy Durga Puja, My Love Tithi ❤️</title>
+  
+  <meta property="og:title" content="🌸 শুভ শারদীয়া তিথি ❤️ | A Special Durga Puja Surprise For You">
+  <meta property="og:description" content="আমার ভালোবাসা তিথি, মা আসছেন ঘরে ঘরে! তোমার জন্য একটি বিশেষ পুজোর উপহার অপেক্ষা করছে...">
+  <meta property="og:image" content="assets/photos/photo3.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#52050E">
+  
+  <!-- Romantic & Royal Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Durga Puja Song -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/durga_puja_song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Fullscreen Fireworks, Sparkle & Heart FX Canvas -->
+  <canvas id="fxCanvas"></canvas>
+
+  <!-- Divine Background Layer with Maa Durga Artwork & Romantic Ambient Light -->
+  <div class="divine-bg-container">
+    <div class="divine-bg-image" style="background-image: url('assets/bg.jpg');"></div>
+    <div class="divine-bg-overlay" id="bgOverlay"></div>
+    <div class="ambient-god-rays"></div>
+    <div class="ambient-glow-orb"></div>
+  </div>
+
+  <!-- Screen Tap Ripple Container -->
+  <div id="rippleContainer" class="ripple-container"></div>
+
+  <!-- Top Floating Controls: Title Banner & Dhak (Dhol) Music Player -->
+  <header class="floating-header">
+    <div class="special-one-badge">
+      <span class="badge-heart">💖</span>
+      <span class="badge-text">For My Tithi</span>
+    </div>
+
+    <!-- Traditional Bengali Dhak / Dhol Button -->
+    <div class="dhak-control-btn" id="dhakToggleBtn" role="button" tabindex="0" aria-label="Toggle festive music" title="ঢাক বাজান / গান শুনুন">
+      <div class="dhak-sound-waves" id="dhakWaves">
+        <span class="dhak-wave wave-1"></span>
+        <span class="dhak-wave wave-2"></span>
+        <span class="dhak-note note-1">♪</span>
+        <span class="dhak-note note-2">♫</span>
+      </div>
+
+      <div class="dhak-drum" id="dhakDrum">
+        <svg class="dhak-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="dhakRed" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#A51528" />
+              <stop offset="50%" stop-color="#C6283D" />
+              <stop offset="100%" stop-color="#600713" />
+            </linearGradient>
+            <linearGradient id="dhakGold" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFF0A0" />
+              <stop offset="50%" stop-color="#FFB300" />
+              <stop offset="100%" stop-color="#B27B00" />
+            </linearGradient>
+            <filter id="dhakGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#FFD54F" flood-opacity="0.8"/>
+            </filter>
+          </defs>
+
+          <!-- White Kash Flower Feather Plumes -->
+          <g class="dhak-plumes">
+            <path d="M 62 16 C 68 6, 82 8, 77 22 C 82 12, 94 18, 83 30 C 88 24, 96 32, 80 40" stroke="#FFFDE7" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            <path d="M 68 20 C 75 12, 86 16, 84 26" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+          </g>
+
+          <!-- Dhak Body -->
+          <path d="M 28 32 C 45 23, 62 25, 75 36 C 82 52, 78 72, 68 82 C 50 89, 34 85, 22 75 C 16 58, 18 42, 28 32 Z" fill="url(#dhakRed)" filter="url(#dhakGlow)"/>
+
+          <!-- White Silk Bands -->
+          <path d="M 32 30 C 47 24, 60 27, 72 36 L 68 44 C 56 37, 44 35, 30 39 Z" fill="#FFF8E7" opacity="0.95" />
+          <path d="M 24 68 C 36 76, 50 78, 65 74 L 62 82 C 46 86, 32 83, 20 75 Z" fill="#FFF8E7" opacity="0.95" />
+
+          <!-- Golden Crossed Ropes -->
+          <g stroke="url(#dhakGold)" stroke-width="1.8" stroke-linecap="round">
+            <line x1="28" y1="36" x2="66" y2="76" />
+            <line x1="40" y1="31" x2="55" y2="81" />
+            <line x1="53" y1="30" x2="40" y2="83" />
+            <line x1="68" y1="35" x2="26" y2="76" />
+          </g>
+
+          <!-- Golden Rim & Head -->
+          <ellipse cx="25" cy="54" rx="10" ry="21" transform="rotate(-15 25 54)" fill="#FFECC8" stroke="url(#dhakGold)" stroke-width="3" />
+          
+          <!-- Dhak Drumstick -->
+          <g class="dhak-drumstick" id="dhakStick">
+            <line x1="12" y1="28" x2="26" y2="48" stroke="url(#dhakGold)" stroke-width="3.2" stroke-linecap="round" />
+            <circle cx="26" cy="48" r="3" fill="#FFB300" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="dhak-badge" id="dhakBadge">
+        <span id="dhakIconPlay">▶</span>
+        <span id="dhakIconPause" style="display:none;">❚❚</span>
+      </div>
+      <span class="dhak-label" id="dhakLabel">গান 🎶</span>
+    </div>
+  </header>
+
+  <!-- Interactive Story Main Stage Viewport -->
+  <main class="interactive-stage" id="mainTouchZone">
+    
+    <!-- ================= STAGE 1: GREETING FOR TITHI ================= -->
+    <section class="stage-view stage-1 active" id="stage1">
+      <div class="stage-center-box">
+        
+        <!-- Sacred Trishul & Love Halo -->
+        <div class="sacred-trishul-halo">
+          <span class="trishul-icon">🔱</span>
+          <div class="aura-ring"></div>
+          <span class="floating-heart-orbit">❤️</span>
+        </div>
+
+        <!-- Personalised Romantic Greeting Header -->
+        <div class="romantic-recipient-banner">
+          <span class="banner-script-en">To My Dearest Love</span>
+          <h2 class="recipient-name-highlight">Tithi (তিথি) ❤️</h2>
+        </div>
+
+        <p class="shloka-verse">॥ যা দেবী সর্বভূতেষু শক্তিরূপেণ সংস্থিতা ॥</p>
+        
+        <!-- Bengali & English Title Greetings in Beautiful Fonts -->
+        <h1 class="main-pujo-title glow-gold">শুভ শারদীয়া তিথি</h1>
+        
+        <div class="golden-filigree-divider">
+          <span class="divider-line"></span>
+          <span class="divider-flourish">❦</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <h2 class="sub-pujo-title">Wishing My Beautiful Tithi a Joyous Durga Puja</h2>
+
+        <!-- Poetic Bengali Love & Festive Card -->
+        <div class="festive-glass-card">
+          <p class="festive-lines">
+            ঢাকের আওয়াজে আকাশ মুখর, কাশফুলের দোলে মন,<br>
+            মা দুর্গার আশীর্বাদে রঙিন হোক তোমার প্রতিটি ক্ষণ।<br>
+            <span class="highlight-romantic-line">আমার সব পুজো, সব প্রার্থনা শুধু তোমায় ঘিরে তিথি ❤️</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= STAGE 2: REGAL ENVELOPE & 8 LOCKED FLIP PHOTO CARDS ================= -->
+    <section class="stage-view stage-2" id="stage2">
+      <div class="stage-center-box stage-2-box">
+        
+        <div class="stage-header-text">
+          <span class="sparkle-spark">✦ ✧ 💖 ✧ ✦</span>
+          <h2 class="stage-title">A Special Surprise For My Tithi…</h2>
+          <p class="stage-subtitle">আমাদের কিছু সুন্দর স্মৃতির মেলবন্ধন 🌸</p>
+        </div>
+
+        <!-- Regal Envelope with Wax Seal -->
+        <div class="regal-envelope-wrapper" id="envelopeWrapper">
+          <div class="envelope-back-glow"></div>
+          
+          <div class="regal-envelope" id="regalEnvelope">
+            <div class="env-back"></div>
+
+            <div class="env-letter" id="envLetter">
+              <div class="letter-filigree-border">
+                <span class="letter-lotus">🪷</span>
+                <p class="letter-main-text">
+                  “This Pujo, you deserve all the happiness in the universe, my Tithi ❤️”
+                </p>
+                <p class="letter-bengali-blessing">
+                  তোমার মুখের ওই মিষ্টি হাসিই আমার জীবনের শ্রেষ্ঠ উপহার!
+                </p>
+              </div>
+            </div>
+
+            <div class="env-pocket"></div>
+
+            <div class="env-flap" id="envFlap">
+              <div class="flap-mandala-pattern"></div>
+            </div>
+
+            <!-- Golden Wax Seal with Heart & Trishul -->
+            <div class="env-wax-seal" id="envWaxSeal">
+              <div class="seal-ring">
+                <span class="seal-icon">❤️</span>
+              </div>
+              <div class="seal-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 Interactive Popping Photo Cards with LOCK -> UNLOCK -> FLIP Layer -->
+        <div class="popping-photos-container hidden" id="poppingPhotosContainer">
+          <div class="photo-grid-instruction">
+            <span id="unlockStatusNotice">🔒 স্পর্শ করে আনলক করুন, তারপর উল্টে ভালোবাসার বার্তা পড়ুন! ✨</span>
+          </div>
+
+          <div class="photos-grid" id="photosGrid">
+            
+            <!-- Photo 1 -->
+            <div class="memory-flip-card is-locked pop-item" data-index="1">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo1.jpg" alt="Memory with Tithi 1" loading="eager">
+                    <div class="photo-tag">Our Precious Moment 🌸</div>
+                    
+                    <!-- Lock Overlay Veil -->
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">❤️</span>
+                    <p class="back-msg">“তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায়, তিথি।”</p>
+                    <span class="back-sig">Forever Yours ✨</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="memory-flip-card is-locked pop-item" data-index="2">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo2.jpg" alt="Tithi in Saree" loading="eager">
+                    <div class="photo-tag">My Gorgeous Girl 🌹</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💖</span>
+                    <p class="back-msg">“তোমার এই মায়াবী রূপ দেখে প্রতিবার নতুন করে প্রেমে পড়ি!”</p>
+                    <span class="back-sig">My Sweetheart 💫</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="memory-flip-card is-locked pop-item" data-index="3">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo3.jpg" alt="Forehead kiss with Tithi" loading="eager">
+                    <div class="photo-tag">Pure Love & Trust 🕊️</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💕</span>
+                    <p class="back-msg">“তোমার কপালে আঁকা ভালোবাসায় আমার সারা জীবনের শান্তি।”</p>
+                    <span class="back-sig">Soulmates Always 🔐</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="memory-flip-card is-locked pop-item" data-index="4">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo4.jpg" alt="Cute Tithi Selfie" loading="eager">
+                    <div class="photo-tag">My Favorite Smile 🌟</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💓</span>
+                    <p class="back-msg">“তোমার ওই মিষ্টি হাসির চেয়ে সুন্দর আর কিছুই হতে পারে না!”</p>
+                    <span class="back-sig">Always Keep Smiling 😊</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="memory-flip-card is-locked pop-item" data-index="5">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo5.jpg" alt="Couple Journey Selfie" loading="eager">
+                    <div class="photo-tag">Together Everywhere 🚀</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💗</span>
+                    <p class="back-msg">“জীবনের প্রতিটি রাস্তায় তোমার হাত ধরে হেঁটে যেতে চাই তিথি।”</p>
+                    <span class="back-sig">Together Forever 💍</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 6 (NEW) -->
+            <div class="memory-flip-card is-locked pop-item" data-index="6">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo6.jpg" alt="Tithi in Blue Saree" loading="eager">
+                    <div class="photo-tag">Blue Saree Angel 💙</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💙</span>
+                    <p class="back-msg">“নীল শাড়িতে তোমায় রাজকন্যার মতো লাগে, আমার হৃদয়ের রানি!”</p>
+                    <span class="back-sig">My Beautiful Princess 👑</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 7 (NEW) -->
+            <div class="memory-flip-card is-locked pop-item" data-index="7">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo7.jpg" alt="Couple in Pink & White" loading="eager">
+                    <div class="photo-tag">Perfect Match 💕</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💖</span>
+                    <p class="back-msg">“তোমার পাশাপাশি দাঁড়িয়ে থাকা মুহূর্তগুলোই আমার জীবনের সেরা প্রাপ্তি।”</p>
+                    <span class="back-sig">Always By Your Side 👫</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 8 -->
+            <div class="memory-flip-card is-locked pop-item" data-index="8">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo8.jpg" alt="Sweet Couple Moment" loading="eager">
+                    <div class="photo-tag">My Queen Tithi 👑</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💝</span>
+                    <p class="back-msg">“এই পুজোয় ও আগামী প্রতিটি পুজোয় শুধু তোমাকেই চাই তিথি!”</p>
+                    <span class="back-sig">You & Me Forever 💘</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 9 (NEW) -->
+            <div class="memory-flip-card is-locked pop-item" data-index="9">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo9.jpg" alt="Sunny Day Couple Selfie" loading="eager">
+                    <div class="photo-tag">Sunny Days With You ☀️</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💛</span>
+                    <p class="back-msg">“তোমার মুখের ওই রোদের মতো হাসিতেই আমার প্রতিটি দিন উজ্জ্বল হয়ে ওঠে তিথি।”</p>
+                    <span class="back-sig">My Sunshine ☀️</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo 10 (NEW) -->
+            <div class="memory-flip-card is-locked pop-item" data-index="10">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="photo-frame">
+                    <img src="assets/photos/photo10.jpg" alt="Hand in Hand collage with Tithi" loading="eager">
+                    <div class="photo-tag">Hand in Hand Forever 💍</div>
+                    
+                    <div class="card-lock-overlay">
+                      <div class="lock-icon-box">
+                        <span class="lock-icon">🔒</span>
+                      </div>
+                      <span class="lock-label">Touch to Unlock 💖</span>
+                    </div>
+
+                    <span class="flip-hint-badge">Tap to flip ↺</span>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="love-message-content">
+                    <span class="back-heart">💍</span>
+                    <p class="back-msg">“তোমার হাতটি সারাজীবন এভাবেই শক্ত করে ধরে রাখতে চাই, কোনোদিন ছাড়বো না।”</p>
+                    <span class="back-sig">Promise Of Love 🔐</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /.photos-grid -->
+
+          <div class="continue-to-gift-prompt" id="continueToGiftPrompt">
+            <span class="prompt-glow-text">👇 Tap here or screen to unlock your Pujo Gift Box 🎁</span>
+          </div>
+
+        </div><!-- /.popping-photos-container -->
+
+      </div>
+    </section>
+
+
+    <!-- ================= STAGE 3: THE GRAND GIFT REVEAL & 3D 'I LOVE YOU TITHI' ================= -->
+    <section class="stage-view stage-3" id="stage3">
+      
+      <!-- Interactive Floating Love Icons in Background -->
+      <div class="floating-love-backdrop" id="loveBackdrop">
+        <span class="interactive-love-icon love-icon-1" data-heart="💖" title="Tap me!">💖</span>
+        <span class="interactive-love-icon love-icon-2" data-heart="💕" title="Tap me!">💕</span>
+        <span class="interactive-love-icon love-icon-3" data-heart="💓" title="Tap me!">💓</span>
+        <span class="interactive-love-icon love-icon-4" data-heart="❤️" title="Tap me!">❤️</span>
+        <span class="interactive-love-icon love-icon-5" data-heart="💗" title="Tap me!">💗</span>
+        <span class="interactive-love-icon love-icon-6" data-heart="💝" title="Tap me!">💝</span>
+        <span class="interactive-love-icon love-icon-7" data-heart="🌹" title="Tap me!">🌹</span>
+        <span class="interactive-love-icon love-icon-8" data-heart="🌸" title="Tap me!">🌸</span>
+      </div>
+
+      <div class="stage-center-box stage-3-box">
+        
+        <div class="gift-announcement" id="giftAnnouncement">
+          <span class="announcement-tag">A Special Gift For Tithi ❤️</span>
+          <h2 class="announcement-title">শারদীয় পুজোর উপহার</h2>
+          <p class="announcement-desc">Your special Pujo gift is waiting, my love…</p>
+        </div>
+
+        <!-- 3D Sacred Mystery Gift Chest -->
+        <div class="mystery-gift-scene" id="mysteryGiftScene">
+          
+          <div class="shockwave-ring" id="shockwaveRing"></div>
+          <div class="divine-sunburst" id="divineSunburst"></div>
+
+          <!-- 3D Gift Box / Chest -->
+          <div class="sacred-gift-chest" id="sacredChest">
+            <div class="chest-lid" id="chestLid">
+              <div class="lid-crown">
+                <div class="golden-ribbon-bow">
+                  <span class="bow-wing wing-left"></span>
+                  <span class="bow-center-knot"></span>
+                  <span class="bow-wing wing-right"></span>
+                </div>
+              </div>
+              <div class="lid-trim"></div>
+            </div>
+
+            <div class="chest-body">
+              <div class="chest-front-filigree">
+                <span class="filigree-emblem">✨ For Tithi ✨</span>
+              </div>
+              <div class="chest-ribbon-v"></div>
+              <div class="chest-ribbon-h"></div>
+            </div>
+          </div>
+
+          <!-- The Grand Surprise Card (Surges out of chest) -->
+          <div class="grand-surprise-card" id="grandSurpriseCard">
+            <div class="surprise-card-inner">
+              <div class="card-divine-motif">🌸</div>
+              <h3 class="card-greeting-bn">শুভ শারদীয়া তিথি ❤️</h3>
+              <p class="card-greeting-en">A little gift, with infinite love and blessings!</p>
+
+              <!-- Spectacular ₹1,000 Golden Medallion -->
+              <div class="golden-amount-pod">
+                <div class="amount-shimmer-sweep"></div>
+                <div class="amount-content">
+                  <span class="rupee-sign">₹</span>
+                  <span class="rupee-number" id="displayAmount">1,000</span>
+                </div>
+                <span class="amount-label">তিথির শারদীয় পুজো সালামী</span>
+              </div>
+
+              <!-- Blessing Words & UPI confirmation -->
+              <p class="blessing-words">
+                “May your Pujo be filled with infinite smiles, joy and our beautiful memories.”
+              </p>
+
+              <div class="upi-sent-badge">
+                <span class="tick-mark">✓</span>
+                <span>Your gift has been sent separately via UPI.</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.mystery-gift-scene -->
+
+        <!-- ================= 3D 'I LOVE YOU TITHI' FINALE ANIMATION ================= -->
+        <div class="love-finale-3d hidden" id="loveFinale3D">
+          <div class="love-3d-wrapper">
+            <div class="beating-3d-heart">❤️</div>
+            <h1 class="love-3d-text" id="love3DText">I Love You Tithi</h1>
+            <div class="beating-3d-heart">❤️</div>
+          </div>
+          <p class="love-3d-subtext">“তুমি আমার পুজো, তুমিই আমার প্রার্থনা, আমার সবটুকু তুমি তিথি।”</p>
+          <div class="love-sparkle-stars">✨ 💖 ✨</div>
+        </div>
+
+        <!-- Post-Reveal Romantic Actions -->
+        <div class="celebration-dock hidden" id="celebrationDock">
+          <button class="dock-btn celebrate-now-btn" id="btnCelebrateDock" type="button">
+            <span>💖 Celebrate Love Again</span>
+          </button>
+          <button class="dock-link-btn" id="btnRestartDock" type="button">
+            <span>🔄 Replay From Beginning</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FLOATING TAP-ANYWHERE GUIDE PILL ================= -->
+  <footer class="floating-tap-bar">
+    <div class="tap-guide-pill" id="tapGuidePill">
+      <span class="tap-hand-icon">👆</span>
+      <span class="tap-guide-text" id="tapGuideText">তিথি, স্ক্রিনের যেকোনো জায়গায় স্পর্শ করো ✨ (Tap anywhere)</span>
+      <span class="tap-pulse-ripple"></span>
+    </div>
+
+    <!-- 3-Dot Progress Stepper -->
+    <div class="minimal-stepper" aria-label="Progress">
+      <span class="mini-dot active" id="dot1"></span>
+      <span class="mini-line"></span>
+      <span class="mini-dot" id="dot2"></span>
+      <span class="mini-line"></span>
+      <span class="mini-dot" id="dot3"></span>
+    </div>
+  </footer>
+
+  <!-- Romantic Toast Notification Bubble -->
+  <div class="festive-toast" id="festiveToast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
